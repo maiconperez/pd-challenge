@@ -1,0 +1,9 @@
+- hosts: pd-exam
+  vars:
+    http_port: 8080
+  remote_user: root
+  tasks:
+  - name: Running
+    docker-compose up --build 
+  -name: Shutting down
+    docker-compose down -v
